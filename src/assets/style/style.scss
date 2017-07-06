@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+$navbar-height: 65px;
+$navbar-bg: #03A9F4;
+$navbar-border: 1px;
+
+$navbar-padding-y: 19px;
+$navbar-padding-x: 30px;
+
+$navbar-brand-bg: $navbar-bg;
+
+$navbar-brand-width: 250px;
+$navbar-brand-border: 0;
+
+/*
+Sidebar
+ */
+
+$sidebar-bg: #efefef;
+$sidebar-color: #444;
+$sidebar-padding: 10px;
+$spacer: 10px;
+$sidebar-width: 250px;
+
+$aside-menu-width: 200px;
+
+body {
+	background-color: #fff !important;
+	color: #444;
+	min-height: 100vh;
+	font-family: 'Hind', sans-serif;
+}
+
+.app-header.navbar {
+	position: relative;
+	flex-direction: row;
+	height: $navbar-height;
+	margin: 0;
+	padding: 0;
+	background-color: $navbar-bg;
+
+	.navbar-brand {
+		display: inline-block;
+		width: $navbar-brand-width;
+		height: $navbar-height;
+		padding: $navbar-padding-y $navbar-padding-x;
+		margin-right: 0;
+		color: #fff;
+		background-color: $navbar-brand-bg;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.nav-item {
+		position: relative;
+		min-width: 50px;
+		margin: 0 !important;
+		text-align: center;
+
+		.nav-link {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.app-body {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	overflow-x: hidden;
+
+	.main {
+		flex: 1;
+		min-width: 0;
+		padding: 20px;
+	}
+
+	.sidebar {
+		padding-top: 20px;
+		height: calc(100vh - #{$navbar-height});
+		flex: 0 0 $sidebar-width;
+		order: -1;
+		background-color: #B3E5FC;
+		&.nav {
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: 0;
+			margin-bottom: 0;
+			list-style: none;
+		}
+	}
+}
+

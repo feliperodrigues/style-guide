@@ -1,3 +1,46 @@
-<h1>
-  {{title}}
-</h1>
+<header class="app-header navbar">
+	<button class="navbar-toggler d-lg-none" type="button">&#9776;</button>
+	<a class="navbar-brand" href="#">Style Guide</a>
+	<ul class="nav navbar-nav d-md-down-none">
+		<li class="nav-item px-3">
+			<a class="nav-link">Link 1</a>
+		</li>
+	</ul>
+</header>
+
+<div class="app-body">
+	<div class="sidebar">
+		<nav class="sidebar-nav">
+			<ul class="">
+				<li class="">
+					<a class="nav-link" href="#"><i class="icon-speedometer"></i> Getting Started</a>
+				</li>
+
+				<li class="">
+					<a class="nav-link" href="#" (click)="loadAlertDoc()"><i class="icon-speedometer"></i> Alert</a>
+				</li>
+				<li class="">
+					<a class="nav-link" href="#" (click)="loadButtonDoc()"><i class="icon-speedometer"></i> Button</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="main">
+		<div class="row">
+			<div class="col-lg-12" *ngIf="currentDoc">
+				<h1>Components</h1>
+
+				<h2>{{currentDoc.title}}</h2>
+
+				<p [innerHtml]="currentDoc.description">
+
+				</p>
+
+				<div class="examples" [innerHtml]="currentDoc.example"></div>
+
+				<markdown path="./assets/doc/{{currentDoc.codes.html}}"></markdown>
+
+			</div>
+		</div>
+	</div>
+</div>

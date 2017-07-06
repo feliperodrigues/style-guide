@@ -1,0 +1,9 @@
+{
+	"title" : "Buttons",
+	"description" : "Use Bootstrap’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.<br/><br/>Bootstrap includes six predefined button styles, each serving its own semantic purpose.",
+	"example" : "<button type=\"button\" class=\"btn btn-primary\">Primary</button>\n\n<button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n\n<button type=\"button\" class=\"btn btn-success\">Success</button>\n\n<button type=\"button\" class=\"btn btn-info\">Info</button>\n\n<button type=\"button\" class=\"btn btn-warning\">Warning</button>\n\n<button type=\"button\" class=\"btn btn-danger\">Danger</button>\n\n<button type=\"button\" class=\"btn btn-link\">Link</button>",
+	"codes" : {
+		"html" : "button.html",
+		"javascript" : ""
+	}
+}
